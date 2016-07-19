@@ -1,0 +1,249 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="智能社 - zhinengshe.com">
+<meta name="copyright" content="智能社 - zhinengshe.com">
+<title>智能社 - www.zhinengshe.com</title>
+<style>
+*{ padding:0; margin:0;}
+a{ text-decoration:none;}
+li{ list-style:none;}
+.fl{ float:left;}
+.fr{ float:right;}
+.clearfix:after{ content:''; display:block; clear:both;}
+.clearfix{ zoom:1;}
+.wrapper{ font:12px/1em '宋体'; min-width:1007px;  height:41px; background:url(img/head_bg.png) repeat-x;}
+/*head*/
+.head{ width:1007px; margin:0 auto; height:41px;}
+.head h1{  width:88px; height:31px; margin-top:5px; margin-left:4px;}
+.head h1 a{ display:block; width:100%; height:100%; background:url(img/logo.png); text-indent:-999em;}
+.head_nav{ margin-top:15px; margin-left:31px;}
+.head_nav li{ margin-right:15px; position:relative;}
+.head_nav li a{ color:#fff;}
+.head_nav li a , .head_nav li span{ float:left;}
+.head_nav li span{ border:4px solid transparent; border-top:4px solid #fff;  width:0; height:0; margin-top:4px; margin-left:3px;}
+.head_nav li a:hover{ color:#cce162;}
+.head_nav li i{ width:0; height:16px; border-left:1px  dotted #fff; margin-left:8px;}
+.head_nav .first{ margin-right:8px;}
+.search_box{ width:130px; height:29px; background:#d7d7d7 url(img/search.png) no-repeat 101px 7px; border-radius:15px; margin-top:7px; }
+.search_box input{ width:82px; height:29px; line-height:29px; outline:none; border:none; background:none; margin-left:15px;}
+.head_search a,.head_search i{ float:left;}
+.head_search a{ margin-top:16px; color:#fff;}
+.head_search a.vip{ margin:16px 7px 0;}
+.head_search i{ height:14px; margin:15px 15px 0; border-right:1px solid #fff;}
+/*top_nav*/
+.top_nav{ width:1007px; margin:0 auto; background:#f5f5f5; height:109px;}
+.top_nav h2{ width:164px; height:65px;}
+.top_nav h2 a{ display:block; width:100%; height:100%; background:url(img/top_logo.png); text-indent:-999em; margin:18px 0 0 10px;}
+.top_nav_box{ margin-top:52px;}
+.top_nav_box li{ float:left; margin-right:16px;}
+.top_nav_box li a{ float:left; padding:0 2px 8px; color:#666;}
+.top_nav_box li span{ float:left; height:10px; border-left:1px dotted #999; margin-left:17px;}
+.top_nav_box li.active a{ border-bottom:2px solid  #669900;}
+.top_nav_box li a.last{color:#929900;}
+.top_nav_box li a:hover{border-bottom:2px solid  #669900;}
+/*content*/
+.content{ width:1007px; margin:0 auto;}
+.con_l{ width:701px; border-left:4px solid green;}
+.con_l h3{ margin-top:26px; margin-left:35px; font-weight:normal; color:#669933; font-size:24px;}
+.con_l p{ font-weight:bold; color:#999; margin-top:10px; margin-left:35px;}
+.con_list{ height:28px; background:url(img/nav_bg.png); padding-left:54px; margin-top:36px;}
+.con_list li{ float:left; width:120px; text-align:center; line-height:28px; position:relative;}
+.con_list li a{ position: relative; z-index:2; color:#000;}
+.con_list li span{ position:absolute;top:0; left:-15px; background:url(img/active_nav_bg.png); width:150px; height:28px;  display:none;}
+.con_list li.active span{ display:block;}
+.list1 p{ padding-right:11px; margin-top:15px; }
+.list1 p a{ height:14px; line-height:14px ; border-right:1px solid #999; color:#999; padding:0 15px; }
+.con_num{ position:relative; margin-top:29px;height: 12px;}
+.con_clock{ width:24px; height:24px; position:absolute; background:url(img/clock.png); top:0; left:18px;}
+.con_tit{ position:absolute; top:6px; left:59px; }
+.con_num_in{ position:absolute; left:145px; top:10px; background:#ececec; height:2px; width:556px;}
+.con_num_in span{ position:absolute;top:0; left:0; height:2px; width:440px; background: #090;}
+.con_num_in i{ width:8px; height:8px; background:#090; position:absolute; top:-3px; left:440px; border-radius:50%;}
+.con_num_in em{ position:absolute; top:-32px; left:412px; width:62px; height:26px; background: url(img/num.png); color:#fff; text-align:center; font-style:normal; line-height:20px;}
+.con_l_list{ width:100%;  background:blue;}
+.con_l_list li{ height:109px; border-bottom:1px solid #000; width:100%;}
+.con_r{ width:278px; height:300px; background:yellow;}
+
+/*down_nav   JS添加样式*/
+.down_nav{ width:100px; height:200px; position:absolute; top: 12px;left: 0;border: 1px solid red; background:#fff; display:none;}
+</style>
+<script>
+ window.onload=function(){
+	var oNav=document.getElementById('nav');
+	var aLi=oNav.getElementsByTagName('li');
+	var aDiv=oNav.getElementsByTagName('div');
+	var aSpan=oNav.getElementsByTagName('span')
+	for(var i=0; i<aSpan.length; i++){
+		aLi[i].index=i;
+		aLi[i].onmouseover=function(){
+			for(var i=0; i<aSpan.length; i++){
+				aDiv[i].style.display='';
+			}
+		aDiv[this.index].style.display='block';	
+		}	
+		aLi[i].onmouseout=function(){
+			for(var i=0; i<aSpan.length; i++){
+				aDiv[i].style.display='';
+			}
+		aDiv[this.index].style.display='none';	
+		}			
+	}
+ }
+
+</script>
+
+</head>
+<body>
+	<div class="wrapper">
+    	<div class="head clearfix">
+        	<h1 class="fl"><a href="#">音悦台</a></h1>
+            <ul class="head_nav fl clearfix" id="nav">
+            	<li class="fl first">
+                	<a href="#">我的家</a>
+                    <span></span>
+                    <i class="fl"></i>
+                    <div class="down_nav"></div>
+                </li>
+            	<li class="fl">
+                	<a href="#">首页</a>
+                    <span></span>
+                    <div class="down_nav"></div>
+                </li>
+            	<li class="fl">
+                	<a href="#">悦单</a>
+                    <span></span>
+                    <div class="down_nav"></div>
+                </li>
+            	<li class="fl">
+                	<a href="#">MV</a>
+                    <span></span>
+                    <div class="down_nav"></div>
+                </li>
+            	<li class="fl">
+                	<a href="#">饭团</a>
+                    <span></span>
+                    <div class="down_nav"></div>
+                </li>
+            	<li class="fl">
+                	<a href="#">商场</a>
+                    <span></span>
+                    <div class="down_nav"></div>
+                </li>
+            	<li class="fl">
+                	<a href="#">应用</a>
+                    <span></span>
+                    <div class="down_nav"></div>
+                </li>
+            </ul>
+            <div class="head_search fr clearfix">
+            	<div class="search_box fl">
+                	<input type="text" placeholder="请输入文字 " />
+                </div>
+                <a href="#" class="vip">VIP会员</a>
+                <a href="#">登录</a>
+                <i></i>
+                <a href="#">注册</a>
+            </div>
+        </div>
+        <div class="top_nav clearfix">
+        	<h2 class="fl"><a href="#">音悦V榜</a></h2>
+            <ul class="top_nav_box clearfix fr">
+            	<li class="active">
+                	<a href="#">圧地夺</a>
+                    <span></span>
+                </li>
+            	<li>
+                	<a href="#">圧地地夺</a>
+                    <span></span>
+                </li>
+            	<li>
+                	<a href="#">圧夺</a>
+                    <span></span>
+                </li>
+            	<li>
+                	<a href="#">圧地夺</a>
+                    <span></span>
+                </li>
+            	<li>
+                	<a href="#" class="last">2014音悦V榜盛典</a>
+                </li>
+            </ul>
+        </div>
+        <div class="content clearfix">
+        	<div class="con_l fl">
+            	<h3>内地篇</h3>
+                <p>dsjvdslfjdsfjdfjdsfjd</p>
+                <ul class="con_list clearfix">
+                	<li class="active">
+                    	<a href="#">内地篇</a>
+                        <span></span>
+                    </li>
+                	<li>
+                    	<a href="#">外地篇</a>
+                        <span></span>
+                    </li>
+                	<li>
+                    	<a href="#">香港篇</a>
+                        <span></span>
+                    </li>
+                	<li>
+                    	<a href="#">澳门篇</a>
+                        <span></span>
+                    </li>
+                	<li class="active">
+                    	<a href="#">日本篇</a>
+                        <span></span>
+                    </li>
+                </ul>
+                <div class="list1 clearfix">
+                	<p class="fr">
+                    	<a href="#">TOP1-20</a>
+                        <a href="#">TOP21-40</a>
+                        <a href="#">TOP21-40</a>
+                    </p>
+                </div>
+                <div class="con_num">
+                	<span class="con_clock"></span>
+                    <span class="con_tit">下次排名更新</span>
+                    <div class="con_num_in">
+                    	<span></span>
+                        <i></i>
+                        <em>2分钟</em>
+                    </div>
+                </div>
+                <ul class="con_l_list">
+                	<li></li>
+                	<li></li>
+                	<li></li>
+                	<li></li>
+                	<li></li>
+                	<li></li>
+                </ul>
+            </div>
+        	<div class="con_r fr"></div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

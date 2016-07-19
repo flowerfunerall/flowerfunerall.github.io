@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>拍照</title>
+<style>
+*{ margin:0; padding:0; }
+body{ background:#000; text-align:center; }
+#can{ background:#fff; }
+</style>
+<script>
+	function d2a(n){
+		return n*Math.PI/180;
+	}
+	window.onload=function(){
+		var oBtn = document.querySelector('input');
+		var oC = document.getElementById('can');
+		var gd = oC.getContext('2d');
+		
+		
+		var d = 0;
+		setInterval(function(){
+			d+=5;
+			gd.save();
+			gd.beginPath();
+			gd.translate(400,300);
+			gd.rotate(d2a(d));
+			gd.rect(-100,-100,200,200);
+			
+			var lg = gd.createLinearGradient(-100,-100,200,200);
+			lg.addColorStop(0,'#C9F');
+			lg.addColorStop(0.25,'#F93');
+			lg.addColorStop(0.5,'#36F');
+			lg.addColorStop(0.75,'#3C3');
+			lg.addColorStop(1,'#FF9');
+			
+			gd.strokeStyle = lg;
+			gd.stroke();
+			gd.restore();
+		},16);
+		oBtn.onclick=function(){
+			var oImg = new Image();
+			oImg.src = oC.toDataURL();
+			document.body.appendChild(oImg);
+		};
+	};
+</script>
+</head>
+
+<body>
+<input type="button" value="拍拍拍" /><br />
+<canvas id="can" width="800" height="600">
+	<p>浏览器版本过低，需要更新</p>
+</canvas>
+</body>
+</html>

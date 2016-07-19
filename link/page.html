@@ -1,0 +1,254 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Function page of Sophia</title>
+<link rel="stylesheet" href="css/common.css" />
+<link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" />
+<style>
+.fl{ float:left; }
+.fr{ float:right; }
+.clearfix{ clear:both; }
+.clearfix:after{ display:block;clear:both;content:"";visibility:hidden;height:0; }
+
+html,body{ width:100%; height:100%; min-height:600px;  }
+body{ background:url(../images/background_all.png) no-repeat; background-size:100% 100%; }
+/*---------header--------*/
+.header{ 
+	height:50px; 
+	background:#000; 
+	width:100%; 
+	line-height:50px; 
+	color:#fff;  
+	min-width:1000px; 
+	position:absolute; 
+	left:0; 
+	top:0;  
+}
+.header_l{ font-size:40px; margin-left:250px; }
+.header_l img{ width:30px; height:30px; margin-top:10px; border-radius:50%;}
+.header_r{ font-size:35px; margin-right:250px; }
+.header_r a{ text-decoration:none; color:#fff; font-size:16px; }
+
+/*-------------header-------------*/
+.body{ width:100%; margin:0 auto; position:absolute; top:50px; bottom:50px;  }
+.body ul{ 	width:930px; margin:0 auto; margin-top:5%; 
+			-webkit-transform-style:preserve-3d; 
+			-moz-transform-style:preserve-3d; 
+			-ms-transform-style:preserve-3d; 
+			-o-transform-style:preserve-3d; 
+			transform-style:preserve-3d;
+}
+.body ul li{ 	width:162px; height:400px; margin-left:30px; float:left; position:relative;  overflow:hidden;
+				-webkit-transition:1s all ease; 
+				-moz-transition:1s all ease; 
+				-ms-transition:1s all ease; 
+				-o-transition:1s all ease; 
+				transition:1s all ease;  
+}
+.body ul .body_li1{ margin-left:0; 
+					-webkit-transform:perspective(800px) rotateY(45deg); 
+					-moz-transform:perspective(800px) rotateY(45deg); 
+					-ms-transform:perspective(800px) rotateY(45deg); 
+					-o-transform:perspective(800px) rotateY(45deg); 
+					transform:perspective(800px) rotateY(45deg); 
+}
+.body ul .body_li5{ -webkit-transform:perspective(800px) rotateY(-45deg); 
+					-moz-transform:perspective(800px) rotateY(-45deg);
+					-ms-transform:perspective(800px) rotateY(-45deg);
+					-o-transform:perspective(800px) rotateY(-45deg);
+					transform:perspective(800px) rotateY(-45deg);
+}
+.body ul .body_li2{ -webkit-transform:perspective(800px) rotateY(25deg) scale(.9); 
+					-moz-transform:perspective(800px) rotateY(25deg) scale(.9);
+					-ms-transform:perspective(800px) rotateY(25deg) scale(.9);
+					-o-transform:perspective(800px) rotateY(25deg) scale(.9);
+					transform:perspective(800px) rotateY(25deg) scale(.9);
+}
+.body ul .body_li4{ -webkit-transform:perspective(800px) rotateY(-25deg) scale(.9); 
+					-moz-transform:perspective(800px) rotateY(-25deg) scale(.9);
+					-ms-transform:perspective(800px) rotateY(-25deg) scale(.9);
+					-o-transform:perspective(800px) rotateY(-25deg) scale(.9);
+					transform:perspective(800px) rotateY(-25deg) scale(.9);
+}
+.body ul .body_li3{ -webkit-transform:perspective(800px) scale(.8); 
+					-moz-transform:perspective(800px) scale(.8);
+					-ms-transform:perspective(800px) scale(.8);
+					-o-transform:perspective(800px) scale(.8);
+					transform:perspective(800px) scale(.8);
+}
+.body ul li img{ 	width:162px; height:400px; position:absolute; left:0; top:0; 
+					-webkit-transition:1s all ease;
+					-moz-transition:1s all ease;
+					-ms-transition:1s all ease;
+					-o-transition:1s all ease;
+					transition:1s all ease;
+					-webkit-transform:perspective(800px) scale(1);
+					-moz-transform:perspective(800px) scale(1);
+					-ms-transform:perspective(800px) scale(1);
+					-o-transform:perspective(800px) scale(1);
+					transform:perspective(800px) scale(1);
+}
+.body ul li a{
+	display:block;
+	width:129px;
+	height:321px;
+}
+.body ul li:hover{	-webkit-transform:perspective(800px) rotateY(0deg);
+					-moz-transform:perspective(800px) rotateY(0deg);
+					-ms-transform:perspective(800px) rotateY(0deg);
+					-o-transform:perspective(800px) rotateY(0deg);
+					transform:perspective(800px) rotateY(0deg);
+}
+.mask{ width:162px; height:400px;  position:absolute; left:0; top:0; background:rgba(0,0,0,.3); }
+.mask .mask_text{ 	width:80%; color:#fff;  position:absolute; left:10%; top:10%; font:24px;
+					-webkit-transition:1s all ease;
+					-moz-transition:1s all ease;
+					-ms-transition:1s all ease;
+					-o-transition:1s all ease;
+					transition:1s all ease;
+					
+}
+.mask .mask_text i{
+	display:block;
+	font-style:normal;
+	font-size:16px;
+}
+/*-------------footer------------*/
+.footer{ 
+	position:fixed; 
+	left:0; 
+	bottom:0; 
+	width:100%; 
+	height:50px; 
+	background:#000; 
+	color:#fff; 
+	line-height:50px; 
+	text-align:center; 
+	font-size:12px;
+}
+</style>
+<script>
+window.onload=function(){
+	var oUl=document.getElementById('body_ul');
+	var aLi=oUl.getElementsByTagName('li');
+	var aMask=oUl.getElementsByTagName('div');
+	var aImg=oUl.getElementsByTagName('img');
+	var aMask_text=oUl.getElementsByTagName('p');
+	for(var i=0;i<aLi.length;i++){
+		aLi[i].index=i;
+		aLi[i].onmouseover=function(){
+			aMask[this.index].style.background='rgba(0,0,0,0)';
+			aImg[this.index].style.WebkitTransform='perspective(800px) scale(1.5)';
+			aImg[this.index].style.MozTransform='perspective(800px) scale(1.5)';			
+			aImg[this.index].style.Mstransform='perspective(800px) scale(1.5)';
+			aImg[this.index].style.OTransform='perspective(800px) scale(1.5)';
+			aImg[this.index].style.transform='perspective(800px) scale(1.5)';
+			aMask_text[this.index].style.WebkitTransform='perspective(800px) translate(0,300px)';
+			aMask_text[this.index].style.MozTransform='perspective(800px) translate(0,300px)';
+			aMask_text[this.index].style.Mstransform='perspective(800px) translate(0,300px)';
+			aMask_text[this.index].style.OTransform='perspective(800px) translate(0,300px)';
+			aMask_text[this.index].style.transform='perspective(800px) translate(0,300px)';			
+		};
+		aLi[i].onmouseout=function(){
+			aMask[this.index].style.background='rgba(0,0,0,.3)';
+			aImg[this.index].style.WebkitTransform='perspective(800px) scale(1)';
+			aImg[this.index].style.MozTransform='perspective(800px) scale(1)';
+			aImg[this.index].style.Mstransform='perspective(800px) scale(1)';
+			aImg[this.index].style.OTransform='perspective(800px) scale(1)';
+			aImg[this.index].style.transform='perspective(800px) scale(1)';	
+			aMask_text[this.index].style.WebkitTransform='perspective(800px) translate(0,0)';
+			aMask_text[this.index].style.MozTransform='perspective(800px) translate(0,0)';
+			aMask_text[this.index].style.Mstransform='perspective(800px) translate(0,0)';
+			aMask_text[this.index].style.OTransform='perspective(800px) translate(0,0)';
+			aMask_text[this.index].style.transform='perspective(800px) translate(0,0)';	
+		}
+	}
+	
+	if(window.navigator.userAgent.indexOf('MSIE 6.0')!=-1){
+		alert('浏览器版本过低');
+	}
+	if(window.navigator.userAgent.indexOf('MSIE 7.0')!=-1){
+		alert('浏览器版本过低');
+	}
+	if(window.navigator.userAgent.indexOf('MSIE 8.0')!=-1){
+		alert('浏览器版本过低');
+	}	
+	if(window.navigator.userAgent.indexOf('MSIE 9.0')!=-1){
+		alert('浏览器版本过低');
+	}	
+
+};
+
+
+</script>
+</head>
+<body>
+	<!-------------header---------------->
+	<div class="header clearfix">
+    	<div class="header_l fl">
+    		<img src="../images/portrait.jpg" alt="portrait" />
+    	</div>
+        <div class="header_r fr"><a href="index.html">返回</a></div>
+    </div>
+    
+    <!--------------body------------------>
+    <div class="body">
+    	<ul class="clearfix" id="body_ul">
+        	<li class="body_li1">
+            	<a href="enclosure.html"><img alt="" src="../images/page_1.png" />
+	                <div class="mask">
+	                	<p class="mask_text">
+	                		<b>XHTML/CSS</b>
+	                		<i>各种仿网站的案例</i>
+	                	</p>
+	                </div>
+                </a>
+            </li>
+            <li class="body_li2">
+            	<a href="enclosure2.html"><img alt="" src="../images/page_2.png" />
+	                <div class="mask">
+	                	<p class="mask_text">
+	                		<b>JavaScript</b>
+	                		<i>各种小js效果</i>
+	                	</p>
+	                </div>
+                </a>
+            </li>
+            <li class="body_li3">
+            	<a href="enclosure3.html"><img alt="" src="../images/page_3.png" />
+	                <div class="mask">
+	                	<p class="mask_text">
+	                		<b>HTML5/CSS3</b>
+	                		<i>h5各种小特效</i>
+	                	</p>
+	                </div>  
+                </a>
+            </li>
+            <li class="body_li4">
+            	<a href="javascript:;"><img alt="" src="../images/page_4.png" /></a>
+                <div class="mask">
+                	<p class="mask_text">
+                		<b>About me</b>
+                		<i>关于我的小秘密(✿◡‿◡)</i>
+                	</p>
+                </div>            
+            </li>
+            <li class="body_li5">
+            	<a href="enclosure5.html"><img alt="" src="../images/page_5.png" />
+	                <div class="mask">
+	                	<p class="mask_text">
+	                		<b>Message Board</b>
+	                		<i>小小的留言在这里</i>
+	                	</p>
+	                </div>  
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+    <!-------------footer----------------->
+    <div class="footer">版权所有：Sophia 联系电话：18801139448 邮箱地址：ruixin0313@sina.com</div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>圆</title>
+<style>
+	#box{width:300px;height:300px; border:1px solid #000; border-radius:50%; position:relative;margin:100px auto;}
+	#box span{width:50px;height:50px; background:#C9F; position:absolute; border-radius:50%;left:50%;margin-left:-25px;margin-top:-25px;}
+	body{background:#000;}
+</style>
+<script>
+	window.onload = function(){
+		var oBox = document.getElementById('box');	
+		var oS = oBox.children[0];
+		var R = oBox.offsetWidth/2;
+		//degree 角度  弧度 arc
+		function d2a(n){
+			return n*Math.PI/180;
+		}
+		var N = 10;
+		for(var i = 0;i<N;i++){
+			var oS = document.createElement('span');
+			oBox.appendChild(oS);
+		}
+		var aS = oBox.children;
+		var bOk = true;
+		oBox.onclick = function(){
+			
+			if(bOk){
+				for(var i = 0;i<aS.length;i++){
+					move(aS[i],i*360/N);
+				}
+			}else{
+				for(var i = 0;i<aS.length;i++){
+					move(aS[i],0);
+				}
+			}
+			
+			bOk =!bOk;
+			
+		};
+		
+		function move(obj,target){
+			var start = obj.arc||0;
+			var dis = target - start;
+			var count = Math.round(1000/16);
+			var n = 0;
+			clearInterval(obj.timer);
+			obj.timer = setInterval(function(){
+				n++;
+				var a = 1 - n/count;
+				var cur =start+ dis*(1 - Math.pow(a,3));
+				obj.arc = cur;
+				var x = R+R*Math.sin(d2a(cur));
+				var y = R-R*Math.cos(d2a(cur));
+				obj.style.left = x +'px';
+				obj.style.top = y+'px';
+				
+				if(n == count){
+					clearInterval(obj.timer);
+				}
+				
+			},16);
+			
+		}
+		
+	};
+</script>
+</head>
+
+<body>
+	<div id="box">
+    </div>
+</body>
+</html>

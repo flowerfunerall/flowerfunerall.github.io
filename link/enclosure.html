@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Function pageONE of Sophia</title>
+<!--可无视-->
+<link rel="stylesheet" type="text/css" href="../css/normalize.css" />
+<link rel="stylesheet" type="text/css" href="../css/default.css">
+<link rel="stylesheet" href="../css/style2.css">
+<link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" />
+<style>
+.fl{ float:left; }
+.fr{ float:right; }
+.clearfix{ clear:both; }
+.clearfix:after{ display:block;clear:both;content:"";visibility:hidden;height:0; }
+
+html,body{ width:100%; height:100%; min-height:600px;  }
+body{ background:url(../images/pageONE_background.jpg) no-repeat; background-size:100% 100%; }
+
+.header{ 
+	height:50px; 
+	background:#000; 
+	width:100%; 
+	line-height:50px; 
+	color:#fff;  
+	min-width:1000px; 
+	position:absolute; 
+	left:0; 
+	top:0;  
+}
+.header_l{ font-size:40px; margin-left:250px; }
+.header_l img{ width:30px; height:30px; margin-top:10px; border-radius:50%;}
+.header_r{ font-size:36px; margin-right:250px; }
+.header_r a{ text-decoration:none; color:#fff; font-size:16px; }
+.poster-main{
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin-left:-500px;
+	margin-top:-150px;
+}
+.footer{ 
+	position:fixed; 
+	left:0; 
+	bottom:0; 
+	width:100%; 
+	height:50px; 
+	background:#000; 
+	color:#fff; 
+	line-height:50px; 
+	text-align:center; 
+	font-size:12px;
+}
+</style>
+
+</head>
+<body>
+<header class="header clearfix">
+	<div class="header_l fl">
+		<img src="../images/portrait.jpg" alt="portrait" />
+	</div>
+	<div class="header_r fr"><a href="page.html">返回</a></div>
+</header>
+<div class="poster-main A_Demo">
+	<div class="poster-btn poster-prev-btn"></div>
+	<ul class="poster-list">
+		<li class="poster-item">
+			<a href="../XHTMLCSS/4/jingdong.html">
+				<img src="../XHTMLCSS/img/jingdong.png" width="100%" >
+			</a>
+		</li>
+		<li class="poster-item">
+			<a href="../XHTMLCSS/2/linghunhuixiang.html">
+				<img src="../XHTMLCSS/img/linghunhuixiang.png" width="100%" >
+			</a>
+		</li>
+		<li class="poster-item">
+			<a href="../XHTMLCSS/6/meilishuo.html">
+				<img src="../XHTMLCSS/img/meilishuo.png" width="100%" >
+			</a>
+		</li>
+		<li class="poster-item">
+			<a href="../XHTMLCSS/5/taobao.html">
+				<img src="../XHTMLCSS/img/taobao.png" width="100%" >
+			</a>
+		</li>
+		<li class="poster-item">
+			<a href="../XHTMLCSS/3/xiaomi.html">
+				<img src="../XHTMLCSS/img/xiaomi.png" width="100%" >
+			</a>
+		</li>
+		<li class="poster-item">
+			<a href="../XHTMLCSS/7/xioami2.html">
+				<img src="../XHTMLCSS/img/xiaomi2.png" width="100%" >
+			</a>
+		</li>
+		<li class="poster-item">
+			<a href="../XHTMLCSS/1/yinyuetai.html">
+				<img src="../XHTMLCSS/img/yinyuetai.png" width="100%" >
+			</a>
+		</li>
+	</ul>
+	<div class="poster-btn poster-next-btn"></div>
+</div>
+<div class="footer">版权所有：Sophia 联系电话：18801139448 邮箱地址：ruixin0313@sina.com</div>
+
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/PicCarousel.js"></script>
+<script type="text/javascript">
+$(".A_Demo").PicCarousel("init");
+</script>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>分页效果</title>
+<style>
+	*{margin:0;padding:0; list-style:none;}
+	body{background:#000;}
+	input{margin-left:49%;}
+	#ul1{width:336px; margin:200px auto;}
+	#ul1 li{width:100px;height:100px;background:#ccc;border:1px solid #000;margin:5px; float:left; text-align:center; font-size:40px; line-height:100px;}
+</style>
+<script src="move7.js"></script>
+<script>
+	window.onload = function(){
+		var oUl = document.getElementById('ul1');
+		var aLi = oUl.children;
+		var oBtn = document.getElementById('btn');
+		//布局转换 相对->绝对
+		var arr = [];
+		for(var i = 0;i<aLi.length;i++){
+			arr.push({left:aLi[i].offsetLeft,top:aLi[i].offsetTop});
+		}
+		
+		
+		for(var i = 0;i<arr.length;i++){
+			aLi[i].style.position = 'absolute';
+			aLi[i].style.left = arr[i].left+'px';
+			aLi[i].style.top = arr[i].top+'px';
+			aLi[i].style.margin = 0;
+		}
+		
+		
+		
+		oBtn.onclick = function(){
+			for(var i = 0;i<aLi.length;i++){
+				(function(index){
+					setTimeout(function(){
+						move(aLi[index],{left:400,top:0,width:0,height:0,opacity:0},{complete:function(){
+							
+							
+							//最后一个结束 
+							if(index == aLi.length-1){
+								
+								for(var i = aLi.length-1;i>=0;i--){
+									(function(index){
+										setTimeout(function(){
+											
+											move(aLi[index],{left:arr[index].left,top:arr[index].top,width:100,height:100,opacity:1});
+											
+										},100*(aLi.length-1-i));
+										
+									})(i);
+									
+								}
+							}
+							//最后一个结束 
+							
+						}});
+					},i*100);
+				})(i);
+			}	
+		};
+	};
+</script>
+</head>
+<body>
+	<input type="button" value="走起" id="btn">
+    <ul id="ul1">
+    	<li>1</li>
+    	<li>2</li>
+    	<li>3</li>
+    	<li>4</li>
+    	<li>5</li>
+    	<li>6</li>
+    	<li>7</li>
+    	<li>8</li>
+    	<li>9</li>
+    </ul>
+</body>
+
+</html>

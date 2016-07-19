@@ -1,0 +1,308 @@
+*{margin: 0; padding: 0;}
+a{text-decoration: none;}
+li{list-style: none;}
+html{font-size:20px;}
+
+header{
+	width:16rem;
+	height: 2.252rem;
+	background: -webkit-linear-gradient(#ffffff,#ebebeb);
+	position: relative;
+}
+.back{
+	display: block;
+	width: 3.05rem;
+	height: 1.45rem;
+	background: url(img/back.png) no-repeat;
+	background-size: 100%;
+	position: absolute;
+    top:0.575rem;
+    left:0.55rem;	
+}
+header img{
+	width:3.7rem ;
+	height: 0.975rem;
+	position: absolute;
+	left:6.15rem;
+	top:0.775rem;
+	
+}
+.banner{
+	height: 7.45rem;
+	width: 16rem;
+	position: relative;
+	overflow: hidden;
+	
+}
+.banner ul{
+	width: 80rem;
+	
+}
+.banner ul li{
+	width: 16rem;
+	height: 6.657rem;
+	float: left;
+}
+.banner ul li img{
+	width: 16rem;
+	height: 6.657rem;
+}
+.banner ol{
+	width: 2.5rem;
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	margin-left: -1.125rem;
+	
+}
+.banner ol li{
+	width: 0.25rem;
+	height: 0.25rem;
+	border-radius: 50%;
+	background: #a9a9a9;
+	float: left;
+	margin: 0 0.125rem;
+}
+.banner ol .active{
+	background: #ff4300;
+}
+nav{
+	width:15.2rem;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.nav1{
+	width: 2rem;
+	height: 3rem;
+	margin: 1rem 0.9rem 0 0.9rem;
+	float: left;
+}
+.nav1 img{
+	width: 2rem;
+	height:2rem;
+}
+.nav1 span{
+	display: block;
+	height: 1rem;
+	line-height: 1rem;
+	font-size: 0.6rem;
+	text-align: center;
+	color:#999999;
+}
+.title{
+	margin:1rem 0.5rem 0 0.5rem;
+	border-bottom: 0.125rem solid #dcdcdc;
+	width: 15rem;
+	height: 1.75rem;
+	line-height: 1.75rem;
+	
+}
+.title span{
+	display: block;
+	font-size:0.7rem ;
+	color: #333333;
+}
+.title1{
+	width: 0.1rem;
+	height: 0.75rem;
+	background: #d51938;
+	float: left;
+	margin: 0.5rem 0.5rem 0.5rem 0;
+}
+.title2{
+	float: left;
+}
+.title3{
+	float: right;
+}
+.sort{
+	margin:0.75rem 0.5rem 0 0.5rem;
+	width: 15rem;
+	overflow: hidden;
+}
+.sort ul li{
+	width: 15rem;
+	height: 3rem;
+	margin: 0 0 0.5rem 0;
+}
+.sort-num{
+	height: 3rem;
+	width: 1.5rem;
+	line-height: 3rem;
+	font-size: 1.2rem;
+	color: #FFFFFF;
+	text-align: center;
+	font-weight: bold;
+	float: left;
+}
+.sort-img{
+	width: 4.5rem;
+	height: 3rem;
+	float: left;
+}
+.sort-img img{
+	width: 4.5rem;
+	height: 3rem;
+}
+.sort-text{
+	height: 3rem;
+	width: 9rem;
+	background: #f4f4f4;
+	float: left;
+}
+.sort-text span{
+	display: block;
+	
+}
+.sort-text1{
+	font-size: 0.6rem;
+	width: 3.625rem;
+	float: left;
+	margin: 0.75rem 0.5rem 0.875rem;
+	color: #999999;
+}
+.sort-text2{
+	font-size: 0.8rem;
+	color: #d51938;
+	font-weight: bold;
+	float: right;
+	margin: 1rem 0.5rem 1.35rem;
+}
+.color1{
+	background:#e00202;
+}
+.color2{
+	background:#ff4800;
+}
+.color3{
+	background:#ff7300;
+}
+.color4{
+	background:#ff9d00;
+}
+.color5{
+	background:#ffa800;
+}
+.color6{
+	background:#ffb400;
+}
+.color7{
+	background:#ffba00;
+}
+.color8{
+	background:#fcd000;
+}
+.color9{
+	background:#ffd719;
+}
+.color10{
+	background:#ffe152;
+}
+.stroll{
+	margin:0 0.5rem 0.5rem;
+	width: 15rem;
+	height: 2rem;
+	line-height: 2rem;
+	text-align: center;
+	background: #f5f5f5;
+	font-size:0.7rem ;
+	color: #666666;
+	
+}
+.commodity{
+	margin: 0 0.5rem 0.5rem;
+	height: 8.825rem;
+}
+.commodity img{
+	width: 3.75rem;
+	height: 8.825rem;
+	float: left;
+}
+.commodity ul{
+	border-top: 0.025rem solid #EEEEEE;
+	width: 11.2rem;
+	float: right;
+	height: 8.82rem;
+}
+.commodity ul li{
+	height: 2.215rem;
+	
+}
+.commodity ul li span{
+	display: block;
+	float: left;
+	width: 3.73rem;
+	height: 2.125rem;
+	line-height:2.125rem;
+	text-align: center;
+	font-size: 0.8rem;
+	color: #999999;
+	box-sizing: border-box;
+	border-bottom:0.025rem solid #eeeeee; 
+	border-right:0.025rem solid #eeeeee; 
+}
+.commodity .red{
+	color:#d51942;
+}
+.client{
+	margin: 0.375rem 0.5rem 0.75rem;
+	width: 15rem;
+	height: 4rem;
+	border:0.025rem solid #EEEEEE;
+	border-right:none;
+}
+.client1{
+	width: 5rem;
+	height:4rem;
+	border-right:0.025rem solid #EEEEEE;
+	box-sizing: border-box;
+	float: left;
+	text-align: center;
+}
+.client1 img{
+	margin: 1rem auto 0.6rem;
+	width: 1.1rem;
+	height: 1.1rem;
+	
+}
+.client1 span{
+	display: block;
+	font-size: 0.6rem;
+	color: #999999;
+}
+.login{
+	width: 16rem;
+	height: 2.2rem;
+	line-height: 2.2rem;
+	font-size: 0.7rem;
+	background: #f8f8f8;
+	overflow: hidden;
+	}
+.login a{
+	color: #333333;
+	margin: 0 1.12rem;
+}
+.login .top{
+	float: right;
+	margin-right: 2.1rem;
+	color: #333333;
+}
+header{
+	background: #eeeeee;
+	width: 16rem;
+	height: 3.65rem;
+	text-align: center;
+}
+
+.header1{
+	width: 16rem;
+	font-size: 0.7rem;
+	color: #333333;
+	height:2rem;
+	line-height: 2rem;
+	
+}
+.header2{
+	color:#999999;
+	font-size: 0.55rem;
+}

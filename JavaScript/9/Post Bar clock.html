@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>贴吧时钟</title>
+<style>
+*{margin:0; padding:0; list-style:none; }
+ul{overflow:hidden; height:35px; margin:200px 500px;}
+li{float:left; width:24px; height:35px; overflow: hidden; position:relative; top:0; left:0;}
+li img{ position:absolute; top:0; left:0;}
+</style>
+<script src="move7.js"></script>
+<script>
+	window.onload = function(){
+		var aImg = document.getElementsByTagName('img');
+		//补零函数  1->01 9 09 10
+		
+		
+		function toDou(n){
+			return n<10?'0'+n:''+n;
+		}	
+		
+		function time(){
+			
+			var oDate = new Date();
+			var h = oDate.getHours();
+			var m = oDate.getMinutes();
+			var s = oDate.getSeconds();
+			var str =  toDou(h)+toDou(m)+toDou(s);
+			for(var i = 0;i<str.length;i++){
+				//aImg[i].style.top = -str.charAt(i)*35+'px';
+				move(aImg[i],{top:-str.charAt(i)*35},{'easing':'linear','duration':300});
+			}
+		}
+		time();
+		setInterval(time,1000);
+	};
+</script>
+</head>
+
+<body>
+<ul>
+	<li><img src="num.png" /></li>
+	<li><img src="num.png" /></li>
+	<li><img src="num.png" /></li>
+	<li><img src="num.png" /></li>
+	<li><img src="num.png" /></li>
+	<li><img src="num.png" /></li>
+</ul>
+</body>
+</html>
